@@ -1,0 +1,20 @@
+package code;
+
+import code.BJ11720;
+
+import java.io.IOException;
+
+import code.BJ11659;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		
+		/*
+		BJ11720 bj11720 = new BJ11720();
+		bj11720.bj11720();
+		*/
+		new BJ11659().bj11659();
+	}
+
+}

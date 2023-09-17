@@ -1,0 +1,49 @@
+package code;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class BJ2018  {
+	public void bj2018() throws IOException {
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+
+		int N = Integer.parseInt(stringTokenizer.nextToken());
+		int[] arr;
+		
+		for(int i=1;i<=N; i++) {
+			arr[i]=i;
+		}
+		
+		int start_index = 1;
+		int end_index = 1;
+		int sum = 1;
+		int count = 1; //내 자신 하나 포함하고 시작
+		
+		while(end_index != N) {
+			// N == sum 이면 count++, end_index++, 
+			if(N == sum) {
+				count++;
+				end_index++;
+			}
+			// N > sum 이면, end_index++, sum = sum + arr[end_index]
+			else if(N > sum) {
+				end_index++;
+				sum += arr[end_index];
+			}
+			// N < sum 이면, sum - arr[start_index], start_index++
+
+			else if(N < sum) {
+				sum -= arr[start_index];
+				start_index++;
+			}
+			
+		}
+		
+		System.out.println(count);
+		
+	}
+}

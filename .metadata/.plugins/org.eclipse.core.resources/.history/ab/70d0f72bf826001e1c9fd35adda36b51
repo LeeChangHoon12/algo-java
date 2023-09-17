@@ -1,0 +1,15 @@
+package code;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class BJ2018 {
+	public void bj2018() {
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer stringTokenizer = new Stringtokennizer(bufferedReader.readLine());
+		
+		
+	}
+}
